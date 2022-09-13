@@ -11,7 +11,7 @@ class TitleWidget extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(25.0),
           child: Text(
-            'DirtSA Collection',
+            'Basketball Collection Cards',
             style: TextStyle(
                 fontSize: 24, fontWeight: FontWeight.w600, color: Colors.grey),
           ),
