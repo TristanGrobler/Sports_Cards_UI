@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StatsList extends StatelessWidget {
-  const StatsList({Key? key}) : super(key: key);
+  StatsList({required this.data});
+
+  Map<dynamic, dynamic> data;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class StatsList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              'Wins',
+              'Offence',
               style: TextStyle(fontSize: 50, color: Colors.grey),
             ),
             SizedBox(
@@ -41,7 +43,7 @@ class StatsList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Motorcross',
+                        'Points',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -53,7 +55,7 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '25',
+                    data['points'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
@@ -78,7 +80,7 @@ class StatsList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Freestyle',
+                        'Assists',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -90,7 +92,7 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '42',
+                    data['assists'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
@@ -115,7 +117,7 @@ class StatsList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Motards',
+                        'Field Throws Made',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -127,7 +129,7 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '59',
+                    data['ftm'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
@@ -135,7 +137,7 @@ class StatsList extends StatelessWidget {
             ),
             SizedBox(height: 50),
             Text(
-              'Skills',
+              'Defence',
               style: TextStyle(fontSize: 50, color: Colors.grey),
             ),
             SizedBox(
@@ -157,14 +159,14 @@ class StatsList extends StatelessWidget {
                         width: 30,
                         height: 30,
                         child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/705/705895.png',
+                            'https://cdn-icons-png.flaticon.com/512/3349/3349343.png',
                             fit: BoxFit.fitWidth),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Clutch Control',
+                        'Turnovers',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -176,7 +178,7 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '76',
+                    data['turnovers'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
@@ -194,14 +196,14 @@ class StatsList extends StatelessWidget {
                         width: 30,
                         height: 30,
                         child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/705/705895.png',
+                            'https://cdn-icons-png.flaticon.com/512/3349/3349343.png',
                             fit: BoxFit.fitWidth),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Brake Control',
+                        'Blocks',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -213,7 +215,7 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '97',
+                    data['blocks'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
@@ -231,14 +233,14 @@ class StatsList extends StatelessWidget {
                         width: 30,
                         height: 30,
                         child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/705/705895.png',
+                            'https://cdn-icons-png.flaticon.com/512/3349/3349343.png',
                             fit: BoxFit.fitWidth),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Balance',
+                        'Steals',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
@@ -250,49 +252,13 @@ class StatsList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '77',
+                    data['steals'],
                     style: TextStyle(color: Color(0xff010125), fontSize: 30),
                   ),
                 )
               ],
             ),
             SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        width: 30,
-                        height: 30,
-                        child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/705/705895.png',
-                            fit: BoxFit.fitWidth),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Endurance',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30,
-                            color: Colors.grey),
-                      ),
-                    )
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    '80',
-                    style: TextStyle(color: Color(0xff010125), fontSize: 30),
-                  ),
-                )
-              ],
-            ),
           ],
         ),
       ),
